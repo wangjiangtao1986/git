@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="calendar"
+  id="myeclipse.1367911508250"
+  context-root="/calendar"
+  j2ee-spec="5.0"
+  archive="calendar.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

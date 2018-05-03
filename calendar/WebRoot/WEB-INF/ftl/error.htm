@@ -1,0 +1,108 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<#assign modelpath = "blue" />
+<#if userModelId?exists&&userModelId=="2">	
+	<#assign modelpath = "gray" />
+</#if>
+<title>错误提示</title>
+<script type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+
+function returnUrl(){
+	window.open('/eams', '', 'resizable=yes,top=0, left=0, width='+(screen.availWidth-11)+',height='+(screen.availHeight-130)+',fullscreen=no,menubar=yes,scrollbars=yes,titlebar=yes,toolbar=yes,location=yes,status=yes', '_blank');	   
+	window.open('','_parent');
+	window.opener=null;
+	window.close();
+}
+</script>
+<link href="${req.contextPath}/css/${modelpath?if_exists}/error/style0.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="0" topmargin="0" background="image/${modelpath?if_exists}/error/BG.jpg" style="overflow-y:hidden; background-attachment:fixed; background-position:right top; background-repeat:no-repeat" bgcolor="#EBEBEB">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center" valign="top"><img src="image/${modelpath?if_exists}/login/loginarea/pic01.png" width="420" height="152"></td>
+  </tr>
+</table>
+<table width="100%" height="50%" border="0" align="center" cellpadding="0" cellspacing="1">
+  <tr>
+    <td align="center" > 
+      <table width="395" height="212" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td valign="top">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" background="image/${modelpath?if_exists}/error/error01.png">
+              <tr>
+                <td align="center" valign="top">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="58">&nbsp;</td>
+                    </tr>
+                  </table>
+                  <table width="370" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                     <td width="0" height="70" align="right"></td>
+                      <td align="center" ><font size="4">操作失败!</font></td>
+                    </tr>
+                    <tr>
+                      <td height="10" align="left"></td>
+                    </tr>
+                  </table>
+                  <!--<table width="322" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="72" height="30" align="right">用户名：</td>
+                      <td width="180" align="left"><input type="text" name="textfield" style="width:176px; height:20px; border:1 solid #C6C6C6; font-size:12px;"></td>
+                      <td width="70" align="right"><a href="#forwardiframe" class="t1">忘记账号</td>
+                    </tr>
+                    <tr>
+                      <td height="30" align="right">密码：</td>
+                      <td align="left"><input type="password" name="textfield2" style="width:176px; height:20px; border:1 solid #C6C6C6; font-size:12px;"></td>
+                      <td align="right"><a href="#forwardiframe" class="t1">忘记密码</td>
+                    </tr>
+                  </table>-->
+                  <table width="368" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="10"></td>
+                    </tr>
+                    <tr>
+                      <td height="1" background="image/${modelpath?if_exists}/error/line01.gif"></td>
+                    </tr>
+                  </table>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="63" align="center"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image10','','image/${modelpath?if_exists}/error/back012.png',1)" onclick="returnUrl();"><img src="image/${modelpath?if_exists}/error/back01.png" name="Image10" width="90" height="40" border="0"></a>
+                      	<!--<input name="Submit" type=image value="提交" src="images/login02.png">--></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+	</td>
+  </tr>
+</table>
+</body>
+</html>

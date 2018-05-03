@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry location="D:\\java\\ojdbc14.jar" />
+	<context id="ORACLETables" targetRuntime="MyBatis3">
+		<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
+			connectionURL="jdbc:oracle:thin:@192.168.1.10:1521:eams" 
+			userId="calendar"
+			password="calendar" />
+		<javaModelGenerator targetPackage="com.wangjt.calendar.dao.model"
+			targetProject="D:\wangjt\Workspaces10\myCalendar\src" />
+		<sqlMapGenerator targetPackage="com.wangjt.calendar.dao.mybatis"
+			targetProject="D:\wangjt\Workspaces10\myCalendar\src" />
+		<javaClientGenerator targetPackage="com.wangjt.calendar.dao"
+			targetProject="D:\wangjt\Workspaces10\myCalendar\src" type="XMLMAPPER" />
+			
+			
+		<table schema="calendar" tableName="CALENDAR_EVENT" /> 
+	
+	</context>
+</generatorConfiguration>
